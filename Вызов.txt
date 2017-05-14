@@ -1,0 +1,7 @@
+DBHelper dbHelper;
+dbHelper = new DBHelper(this);
+SQLiteDatabase database = dbHelper.getWritableDatabase();
+ContentValues contentValues = new ContentValues();
+contentValues.put(dbHelper.KEY_WORD,"Бомба");
+contentValues.put(dbHelper.VALUE_WORD,5);
+database.insert(dbHelper.TABLE_WORDS,null,contentValues);

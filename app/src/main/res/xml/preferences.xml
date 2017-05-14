@@ -1,0 +1,66 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Appearance">
+
+        <CheckBoxPreference
+            android:key="pref_icon"
+            android:title="Use circular icons"
+            android:defaultValue="true" />
+
+        <!--<CheckBoxPreference-->
+            <!--android:key="pref_thumbnail"-->
+            <!--android:title="Display thumbnails"-->
+            <!--android:summary="For images and videos"-->
+            <!--android:dependency="pref_icon"/>-->
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="General">
+
+        <CheckBoxPreference
+            android:key="pref_extension"
+            android:title="Hide extensions"
+            android:summary="For known file types"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="pref_date"
+            android:title="Show last modified"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="pref_size"
+            android:title="Show file sizes"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="About" >
+
+        <Preference
+            android:title="Version"
+            android:summary="@string/app_version" >
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/details?id=com.calintat.explorer" />
+
+        </Preference>
+
+        <Preference
+            android:title="Developer"
+            android:summary="@string/app_developer" >
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/dev?id=5526451977947367946" />
+
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
